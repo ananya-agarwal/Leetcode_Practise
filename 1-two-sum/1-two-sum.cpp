@@ -16,8 +16,8 @@ public:
                     ans.push_back(j);
                 }
             }
-    //		if(ans.size() == 2)
-    //			break;
+    		if(ans.size() == 2)
+    			break;
         }
         return ans;
     }
