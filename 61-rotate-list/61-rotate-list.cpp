@@ -20,9 +20,9 @@ public:
         ListNode* temp = head;
         int length = 1;
         
-        while(temp->next != NULL) 
+        while(temp->next!= NULL) 
         {
-            ++length;
+            length++;
             temp = temp->next;
         }
         
