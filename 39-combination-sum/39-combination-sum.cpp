@@ -5,7 +5,9 @@ public:
         if(ind == cand.size())
         {
             if(target == 0)
+            {
                 ans.push_back(ds);
+            }
             return;
         }
         
@@ -13,10 +15,9 @@ public:
         {
             ds.push_back(cand[ind]);
             helper(ind, cand, target-cand[ind], ans, ds);
-                ds.pop_back();
+            ds.pop_back();
         }
         
-    
         helper(ind+1, cand, target,ans,ds);
     }
     
