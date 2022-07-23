@@ -27,6 +27,6 @@ public:
         if(n%2==1) 
             return nums3[n/2];
         else 
-            return ((float)nums3[(n+1)/2]+(float)nums3[(n-1)/2])/2;
+            return (float)(nums3[(n+1)/2] + nums3[(n-1)/2])/2;
     }
 };
