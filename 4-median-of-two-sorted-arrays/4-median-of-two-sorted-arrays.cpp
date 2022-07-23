@@ -23,9 +23,10 @@ public:
             while(j<m)
                 nums3[k++]=nums2[j++];
         
-            n = n+m;
-    if(n%2==1) 
-        return nums3[((n+1)/2)-1];
-    else return ((float)nums3[(n/2)-1]+(float)nums3[(n/2)])/2;
+        n = n+m;
+        if(n%2==1) 
+            return nums3[((n+1)/2)-1];
+        else 
+            return ((float)nums3[(n+1)/2]+(float)nums3[(n-1)/2])/2;
     }
 };
