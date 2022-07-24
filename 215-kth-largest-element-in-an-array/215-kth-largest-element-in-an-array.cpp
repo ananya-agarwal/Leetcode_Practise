@@ -24,3 +24,6 @@ public:
 };
 
 
+//priority queue me ulta hota ha, here greater vali cheez se ascednign order me lagta ha
+//varna by defult desc order is followed
+//largest ke liye descndg order me k-1 and smllest ke liye, accndng order me k-1 th
