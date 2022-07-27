@@ -12,15 +12,15 @@ public:
     
     int next(int price)
     {
-        int span=1;
+        int c=1;
         while(!st.empty() && st.top().first <= price)
         {
-            span += st.top().second;
+            c += st.top().second;
             st.pop();
         }
-        st.push({price, span});
+        st.push({price, c});
         
-        return span;
+        return c;
     }
     
    // uss element ke left pr jaaek dekhe ki current elemnt se bada elemnt kab aaya tha and ans for that elemnt will be diff of indices of both
