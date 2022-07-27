@@ -3,8 +3,8 @@ class StockSpanner
     
 public:
     
-    int i=0;
-    stack<pair<int,int>> s;
+    stack<pair<int,int>> st;
+    
     StockSpanner()
     {
         
@@ -12,19 +12,18 @@ public:
     
     int next(int price)
     {
-        i++;
-        while(!s.empty() && s.top().second<=price) s.pop();
-        
-        if(s.empty())
+        int span=1;
+        while(!st.empty() && st.top().first <= price)
         {
-            s.push({i,price});
-            return i;
+            span += st.top().second;
+            st.pop();
         }
+        st.push({price, span});
         
-        pair<int,int> temp=s.top();
-        s.push({i,price});
-        return i-temp.first;
+        return span;
     }
+    
+   // uss element ke left pr jaaek dekhe ki current elemnt se bada elemnt kab aaya tha and ans for that elemnt will be diff of indices of both
 };
 
 /**
