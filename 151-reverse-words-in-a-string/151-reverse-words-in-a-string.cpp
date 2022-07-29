@@ -36,25 +36,34 @@
 
 class Solution {
 public:
-    string reverseWords(string s) {
+    string reverseWords(string s) 
+    {
         stack<string>st;
         string str = "";
-        for(int i = 0;i<s.length();i++){
-            if(s[i] != ' ' ){
+        
+        for(int i = 0;i<s.length();i++)
+        {
+            if(s[i] != ' ' )
+            {
                 str += s[i];
-                continue;
+                //continue;
             }
-            else{
+            else
+            {
                 if(str!="")
                    st.push(str);
                 str="";
             }
         }
-        if(str!=""){
+        
+        if(str!="")
+        {
             st.push(str);
         }
+        
         string ans ="";
-        while(!st.empty()){
+        while(!st.empty())
+        {
             ans += st.top() + " ";
             st.pop();
         }
