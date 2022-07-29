@@ -40,26 +40,24 @@ public:
     {
         stack<string>st;
         string str = "";
+        s+=" ";
         
         for(int i = 0;i<s.length();i++)
         {
             if(s[i] != ' ' )
-            {
                 str += s[i];
-                //continue;
-            }
             else
             {
-                if(str!="")
+                if(str!="") //leading spaces
                    st.push(str);
                 str="";
             }
         }
         
-        if(str!="")
-        {
-            st.push(str);
-        }
+        // if(str!="")
+        // {
+        //     st.push(str);
+        // }
         
         string ans ="";
         while(!st.empty())
@@ -67,6 +65,7 @@ public:
             ans += st.top() + " ";
             st.pop();
         }
+        
         ans.pop_back();
         return ans;
     }
