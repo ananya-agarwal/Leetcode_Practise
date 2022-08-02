@@ -5,7 +5,7 @@ class Solution
     {
         if(n==1)
             return s; 
-
+        
         int i=0, j, len = s.size(); 
         string res = ""; 
 
@@ -20,6 +20,9 @@ class Solution
         return countAndSay(n-1, res);
     }
 };
+
+
+//1,2,3...n times tak we need to perform this operation 
 
 
 
