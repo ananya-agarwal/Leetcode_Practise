@@ -1,5 +1,6 @@
-class Solution {
-public:
+class Solution 
+{
+    public:
     string countAndSay(int n, string s="1") 
     {
         if(n==1)
@@ -12,9 +13,16 @@ public:
         {
             j=i; 
 
-            while(i<len && s[i]==s[j]) i++;
-                res += to_string(i-j) + s[j];
+            while(i<len && s[i]==s[j]) 
+                i++;
+            res += to_string(i-j) + s[j];
         }
         return countAndSay(n-1, res);
     }
 };
+
+
+
+
+
+
