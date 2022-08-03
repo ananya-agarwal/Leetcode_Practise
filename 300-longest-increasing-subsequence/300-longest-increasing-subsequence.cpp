@@ -8,7 +8,7 @@ public:
         vector<int> vec;
         vec.push_back(nums[0]);
         
-        for(int i = 1; i < n; i++) 
+        for(int i=1;i<n;i++) 
         {
             if(vec.back() < nums[i]) 
                 vec.push_back(nums[i]);
