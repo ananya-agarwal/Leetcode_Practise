@@ -8,10 +8,10 @@ public:
         for(int i=0;i<l;i++)
         {
             if(address[i] == '.')
-                s = s+"[.]";
+                s += "[.]";
               
             else
-                s = s+address[i];
+                s += address[i];
         }
         return s;
     }
