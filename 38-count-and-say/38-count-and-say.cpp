@@ -22,4 +22,6 @@ class Solution
 };
 
 
-//1,2,3...n times tak we need to perform this operation 
+//1,2,3...n times tak we need to perform this operation  
+//in owrst case, it is possible that each number is unique
+//and 1-1 krke we are moving in the sequence
