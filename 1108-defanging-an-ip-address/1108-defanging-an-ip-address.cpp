@@ -9,9 +9,9 @@ public:
         {
             if(address[i] == '.')
             {
-                s = s+"[";
-                s = s+".";
-                s = s+"]";
+                s = s+"[.]";
+                // s = s+".";
+                // s = s+"]";
             }
               
             else
