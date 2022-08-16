@@ -9,12 +9,10 @@ public:
 		map<string, int> mp;
 		int ans = 0;
 
-		for(string word : words)
+		for(string i : words)
         {
-
 			string s = "";
-
-			for(char c : word)
+			for(char c : i)
 				s += code[c - 'a'];
 			
 			if(mp[s]++ == 0) 
