@@ -23,9 +23,3 @@ class Solution
 
 
 //1,2,3...n times tak we need to perform this operation 
-
-
-
-
-
-
