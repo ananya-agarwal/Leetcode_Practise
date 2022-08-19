@@ -1,8 +1,6 @@
-class Solution 
-{
+class Solution {
 public:
-    
-    int strStr(string h, string n)
+    int strStr(string h, string n) 
     {
         for(int i=0;i<h.length();i++)
         {
