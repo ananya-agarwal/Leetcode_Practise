@@ -50,3 +50,6 @@ public:
 //given 2 eqns, s1-s2=d...s1+s2=sum of all elements of array
 //solve both of these simultnsly 
 //we can find the value of sum of 1 subset 
+
+
+
