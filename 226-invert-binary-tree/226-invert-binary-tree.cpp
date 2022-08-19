@@ -13,13 +13,22 @@ class Solution {
 public:
     TreeNode* invertTree(TreeNode* root)
     {
-        if(root==NULL)
+        if(!root)
             return NULL;
         
-        TreeNode *temp = root->right;
-        root->right=invertTree(root->left);
-        root->left=invertTree(temp);
+        invertTree(root->left);
+        invertTree(root->right);
         
+        TreeNode *temp;
+        temp=root->left;
+        root->left=root->right;
+        root->right=temp;
+
         return root;
     }
 };
+
+//keep on calling recursion on left and right subtree 
+//jab u come at the leaf node, return from there 
+//neeche se ek ek krke trees me left and right pointers will get interchanged
+//bilkul last step pr poora left and right subtree of the root will get swapped
