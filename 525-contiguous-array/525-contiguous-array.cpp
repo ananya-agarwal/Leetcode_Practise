@@ -7,21 +7,22 @@ public:
         mp[0] = -1;
         int N = arr.size();
         
-        for(int i=0;i<N;i++){
-            if(arr[i] == 0){
+        for(int i=0;i<N;i++)
+        {
+            if(arr[i] == 0)
                 sum = sum - 1;
-            }
-            else{
-                sum = sum + arr[i];
-            }
             
-            if(mp.find(sum) != mp.end()){
+            else
+                sum = sum + arr[i];
+            
+            if(mp.find(sum) != mp.end())
+            {
                 int temp = i - mp[sum];
                 length = max(temp,length);
             }
-            else{
+            
+            else
                 mp[sum] = i;
-            }
             
         }
         
