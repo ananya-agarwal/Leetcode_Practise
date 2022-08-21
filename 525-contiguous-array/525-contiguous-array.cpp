@@ -13,7 +13,7 @@ public:
                 sum = sum - 1;
             
             else
-                sum = sum + arr[i];
+                sum = sum + 1;
             
             if(mp.find(sum) != mp.end())
             {
