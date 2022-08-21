@@ -7,6 +7,7 @@ public:
 
     	for(int i=0; i<=n; i++) 
             dp[i][0] = 1;
+        
     	for(int j=1; j<=sum; j++)
             dp[0][j] = 0;
     
@@ -26,8 +27,8 @@ public:
     int findTargetSumWays(vector<int>& arr, int target)
     {
         target=abs(target);
-        int n=arr.size();
-        int sum=0;
+        int n=arr.size(),sum=0;
+        
         for(int i=0;i<n;i++)
             sum+=arr[i];
             
