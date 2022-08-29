@@ -4,10 +4,12 @@ public:
     {
         unordered_map<int, int> m;
         int change = 0;
+        
         for(int i = 0 ; i < bills.size(); i++)
         {
             m[bills[i]]++;
             
+            //sara kaam tabhi krna ha jab coin 5 ka na ho
             if(bills[i] > 5)
             {
                 change = bills[i] - 5;
@@ -15,14 +17,12 @@ public:
                 if(change == 5)
                 {
                     if(m[5] > 0)
-                    {
                         m[5]--;
-                    }
                     else
-                    {
                         return false;
-                    }
                 }
+                
+                
                 //change = 10
                 else
                 {
@@ -32,14 +32,12 @@ public:
                         m[5]--;
                     }
                     else if(m[5] >= 3)
-                    {
                         m[5] -= 3;
-                    }
                     else
-                    {
                         return false;
-                    }
                 }
+                
+                
             }
         }
         
