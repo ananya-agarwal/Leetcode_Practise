@@ -16,6 +16,7 @@ public:
         {
             for(int j=1;j<sum+1;j++)
             {
+                //nums array ke 0 pr hi check krna ha and go till nums[n-1]
                 if(nums[i-1]<=j)
                 {
                     dp[i][j] =  ( (dp[i-1][j-nums[i-1]]) || (dp[i-1][j]) );
