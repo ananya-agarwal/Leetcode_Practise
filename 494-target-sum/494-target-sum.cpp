@@ -1,22 +1,33 @@
 class Solution {
 public:
-    void solve(int &c, int sum, int i, vector<int>& nums, int target){
+    void solve(int &c, int sum, int i, vector<int>& nums, int target)
+    {
         int n = nums.size();
-        if(i >= n) {
-            if(sum == target) c++;
+        if(i == n) 
+        {
+            if(sum == target) 
+                c++;
+            //1 sol aagyaa and return kr gaye
             return;
         }    
+        
         solve(c, sum-nums[i], i+1, nums, target);
         solve(c, sum+nums[i], i+1, nums, target);
+        //har number ko 1 baari plus and 1 baari minus krke we r seeing ki whther 
+        //we r able to achve the reqd sum
+        
     }
     
-    int findTargetSumWays(vector<int>& nums, int target) {
+    int findTargetSumWays(vector<int>& nums, int target) 
+    {
         int c = 0;
         solve(c, 0, 0, nums, target);
         return c;
     }
 };
 
+
+//method 2
 
 //it is same as dividing all the elements in 2 classes, + and - 
 //sum up all the elemnts of a class minus sum up all the elemnts of another class
